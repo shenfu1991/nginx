@@ -29,15 +29,7 @@ server {
 
     error_page   500 502 503 504  /50x.html;
     location = /50x.html {
-        root   /var/sites/yourmall;
-    }
-
-    location ~ \.php$ {
-        root           /var/sites/yourmall;
-        fastcgi_pass   127.0.0.1:9000;
-        fastcgi_index  index.php;
-        fastcgi_param  SCRIPT_FILENAME  /usr/local/nginx/html/$fastcgi_script_name;
-        include        fastcgi_params;
+        root   /home/www/ml.haoyun1991.com;
     }
 
 }
