@@ -34,6 +34,24 @@ server {
 
 }
 
+server {
+    #ssl参数
+    listen              443 ssl;
+    server_name         kexifs.com;
+    #证书文件
+    ssl_certificate     /root/.acme.sh/kexifs.com/kexifs.com.cer;
+    #私钥文件
+    ssl_certificate_key /root/.acme.sh/kexifs.com/kexifs.com.key;
+    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+    #...
+
+location / {
+        root   /home/www/ml.haoyun1991.com;
+        index  index.html index.html;
+    }
+}
+
 </pre>
 
 
